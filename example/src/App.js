@@ -1,10 +1,17 @@
-import React from "react";
+import React, { useState } from "react";
 
-import ExampleComponent from "react-theme-toggle-button";
+import ToggleButton from "react-theme-toggle-button";
 import "react-theme-toggle-button/dist/index.css";
 
 const App = () => {
-  return <ExampleComponent text="Create React Library Example 😄" />;
+  const [isDark, setIsDark] = useState(false);
+
+  return (
+    <ToggleButton
+      isDark={isDark}
+      onChange={() => setIsDark((prevIsDark) => !prevIsDark)}
+    />
+  );
 };
 
 export default App;
