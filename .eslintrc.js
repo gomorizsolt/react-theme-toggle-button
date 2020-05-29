@@ -1,14 +1,13 @@
-{
+module.exports = {
   "parser": "babel-eslint",
   "extends": [
-    "standard",
-    "standard-react",
+    "airbnb",
     "plugin:prettier/recommended",
-    "prettier/standard",
-    "prettier/react"
+    "plugin:react/recommended",
   ],
   "env": {
-    "node": true
+    "browser": true,
+    "jest": true
   },
   "parserOptions": {
     "ecmaVersion": 2020,
@@ -19,15 +18,11 @@
   },
   "settings": {
     "react": {
-      "version": "16"
+      "version": "detect"
     }
   },
   "rules": {
-    "space-before-function-paren": 0,
     "react/prop-types": 0,
-    "react/jsx-handler-names": 0,
-    "react/jsx-fragments": 0,
-    "react/no-unused-prop-types": 0,
-    "import/export": 0
+    "react/jsx-filename-extension": [1, { "extensions": [".js", ".jsx"] }]
   }
 }
