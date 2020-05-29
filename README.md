@@ -62,7 +62,7 @@ npm run dev:package
 npm run dev:example
 ```
 
-Changes made to any of the running instances will live-reload the underlying dev server and will be reflected on active instances.
+Changes made to any of the running instances will live-reload the underlying dev server.
 
 ## License
 
