@@ -43,9 +43,9 @@ const App = () => {
 ## Properties
 
 Property | Description
-:--- | :--- | :---
-`isDark`|Boolean value to set the `aria-label` and `title` attributes according to the theme. ||
-`onChange`|Function to fire when the button is toggled.||
+:--- | :---
+`isDark`|Boolean value to set the `aria-label` and `title` attributes according to the theme.
+`onChange`|Function to fire when the button is toggled.
 -----
 
 ## Development
