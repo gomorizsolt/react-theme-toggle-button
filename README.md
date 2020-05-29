@@ -52,7 +52,7 @@ Property | Description
 
 Refer to https://github.com/transitive-bullshit/create-react-library#development.
 
-Put simple, launch two terminal windows/tabs:
+Put simply, launch two terminal windows/tabs:
 
 ```bash
 npm run dev:package
@@ -62,7 +62,7 @@ npm run dev:package
 npm run dev:example
 ```
 
-Changes made to any of the running instances will live-reload the underlying dev server.
+Changes made to any of the running instances will live-reload the underlying dev server and will be reflected on active instances.
 
 ## License
 
