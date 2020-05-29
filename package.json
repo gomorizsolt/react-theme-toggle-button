@@ -16,11 +16,10 @@
     "dev:package": "microbundle-crl watch --no-compress --format modern,cjs",
     "dev:example": "cd ./example && npm run start",
     "prepublish": "run-s build",
-    "lint": "eslint .",
+    "lint": "eslint src/**/*.js",
     "test": "cross-env CI=1 react-scripts test --env=jsdom",
     "test:watch": "react-scripts test --env=jsdom",
-    "predeploy": "cd example && npm install && npm run build",
-    "deploy": "gh-pages -d example/build"
+    "predeploy": "cd example && npm install && npm run build"
   },
   "peerDependencies": {
     "react": "^16.8.0",
