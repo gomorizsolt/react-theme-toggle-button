@@ -30,6 +30,7 @@ yarn add react-theme-toggle-button
 ```jsx
 import React, { useState } from "react";
 import ToggleButton from "react-theme-toggle-button";
+import "react-theme-toggle-button/dist/index.css";
 
 const App = () => {
   const [isDark, setIsDark] = useState(false);
@@ -40,12 +41,32 @@ const App = () => {
 }
 ```
 
+Caveats:
+- styles must be imported explicitly [for now](https://stackoverflow.com/a/57906016/9599137)
+
 ## Properties
 
 Property | Description
 :--- | :---
 `isDark`|Boolean value to set the `aria-label` and `title` attributes according to the theme.
 `onChange`|Function to fire when the button is toggled.
+-----
+
+## Styling
+
+The package levarages CSS properties in order for you to tailor the colors to suit your needs.
+
+```css
+:root {
+  --color-light-theme: aqua;
+  --color-dark-theme: bisque;
+}
+```
+
+Property | Default
+:--- | :---
+`--color-light-theme`|`#eee`
+`--color-dark-theme`|`#000`
 -----
 
 ## Development
