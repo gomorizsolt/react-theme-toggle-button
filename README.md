@@ -54,7 +54,7 @@ Property | Description
 
 ## Styling
 
-The package levarages CSS properties in order for you to tailor the colors to suit your needs.
+The package leverages CSS properties in order for you to tailor the colors to suit your needs.
 
 ```css
 :root {
