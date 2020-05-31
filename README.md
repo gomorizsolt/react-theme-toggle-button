@@ -52,6 +52,23 @@ Property | Description
 `onChange`|Function to fire when the button is toggled.
 -----
 
+## Styling
+
+The package leverages CSS properties in order for you to tailor the colors to suit your needs.
+
+```css
+:root {
+  --color-light-theme: aqua;
+  --color-dark-theme: bisque;
+}
+```
+
+Property | Default
+:--- | :---
+`--color-light-theme`|`#eee`
+`--color-dark-theme`|`#000`
+-----
+
 ## Development
 
 Refer to https://github.com/transitive-bullshit/create-react-library#development.
