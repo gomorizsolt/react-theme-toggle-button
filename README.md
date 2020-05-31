@@ -30,6 +30,7 @@ yarn add react-theme-toggle-button
 ```jsx
 import React, { useState } from "react";
 import ToggleButton from "react-theme-toggle-button";
+import "react-theme-toggle-button/dist/index.css";
 
 const App = () => {
   const [isDark, setIsDark] = useState(false);
@@ -39,6 +40,9 @@ const App = () => {
   )
 }
 ```
+
+Caveats:
+- styles must be imported explicitly [for now](https://stackoverflow.com/a/57906016/9599137)
 
 ## Properties
 
