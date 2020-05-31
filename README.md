@@ -58,15 +58,15 @@ The package leverages CSS properties in order for you to tailor the colors to su
 
 ```css
 :root {
-  --color-light-theme: aqua;
-  --color-dark-theme: bisque;
+  --color-toggle-light: aqua;
+  --color-toggle-dark: bisque;
 }
 ```
 
 Property | Default
 :--- | :---
-`--color-light-theme`|`#eee`
-`--color-dark-theme`|`#000`
+`--color-toggle-light`|`#eee`
+`--color-toggle-dark`|`#000`
 -----
 
 ## Development
