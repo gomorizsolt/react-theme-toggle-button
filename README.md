@@ -11,6 +11,10 @@ Status and support
 
 Credit goes to [Aaron Iker](https://codepen.io/aaroniker) - he's the creator of the *styles* of this [superb animated toggle button](https://codepen.io/aaroniker/pen/KGpXZo).
 
+## Demo
+
+![](media/demo.gif)
+
 ## Install
 
 ### npm
