@@ -1,7 +1,7 @@
 import React from "react";
 import "@testing-library/jest-dom";
 import renderer from "react-test-renderer";
-import { fireEvent, render } from "@testing-library/react";
+import { fireEvent, render, screen } from "@testing-library/react";
 import ReactThemeToggleButton from "./index";
 
 describe("ReactThemeToggleButton", () => {
@@ -54,6 +54,16 @@ describe("ReactThemeToggleButton", () => {
       fireEvent.click(getByTitle(/activate/i));
 
       expect(onChangeSpy).toHaveBeenCalled();
+    });
+  });
+
+  describe("when `invertIconLogic` prop is true", () => {
+    it("inverts icon logic", () => {
+      render(
+        <ReactThemeToggleButton isDark onChange={() => {}} invertedIconLogic />
+      );
+
+      expect(screen.getByRole("checkbox")).not.toBeChecked();
     });
   });
 });
