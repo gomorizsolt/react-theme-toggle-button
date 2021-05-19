@@ -18,7 +18,7 @@ const ReactThemeToggleButton = ({
   >
     <input
       type="checkbox"
-      defaultChecked={invertedIconLogic ? !isDark : isDark}
+      checked={invertedIconLogic ? !isDark : isDark}
       onChange={onChange}
     />
     <div />
