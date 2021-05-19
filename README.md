@@ -54,6 +54,7 @@ Property | Description
 :--- | :---
 `isDark`|Boolean value to set the `aria-label` and `title` attributes according to the theme.
 `onChange`|Function to fire when the button is toggled.
+`invertedIconLogic`|if true, it will show the icon of the current mode e.g. if isDark=true it will show the moon instead of the sun. (defaults to false)
 -----
 
 ## Styling

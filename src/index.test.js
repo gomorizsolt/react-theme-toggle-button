@@ -1,7 +1,7 @@
 import React from "react";
 import "@testing-library/jest-dom";
 import renderer from "react-test-renderer";
-import { fireEvent, render } from "@testing-library/react";
+import { fireEvent, render, screen } from "@testing-library/react";
 import ReactThemeToggleButton from "./index";
 
 describe("ReactThemeToggleButton", () => {
@@ -15,7 +15,9 @@ describe("ReactThemeToggleButton", () => {
 
   describe("when the `isDark` prop is true", () => {
     it("sets the label's title and aria-label attributes to `Activate light mode`", () => {
-      const { getByTitle } = render(<ReactThemeToggleButton isDark />);
+      const { getByTitle } = render(
+        <ReactThemeToggleButton isDark onChange={() => {}} />
+      );
 
       expect(getByTitle(/activate/i).title).toEqual("Activate light mode");
       expect(getByTitle(/activate/i).getAttribute("aria-label")).toEqual(
@@ -26,7 +28,9 @@ describe("ReactThemeToggleButton", () => {
 
   describe("when the `isDark` prop if false", () => {
     it("sets the label's title and aria-label attributes to `Active dark mode`", () => {
-      const { getByTitle } = render(<ReactThemeToggleButton isDark={false} />);
+      const { getByTitle } = render(
+        <ReactThemeToggleButton isDark={false} onChange={() => {}} />
+      );
 
       expect(getByTitle(/activate/i).title).toEqual("Activate dark mode");
       expect(getByTitle(/activate/i).getAttribute("aria-label")).toEqual(
@@ -54,6 +58,16 @@ describe("ReactThemeToggleButton", () => {
       fireEvent.click(getByTitle(/activate/i));
 
       expect(onChangeSpy).toHaveBeenCalled();
+    });
+  });
+
+  describe("when `invertIconLogic` prop is true", () => {
+    it("inverts icon logic", () => {
+      render(
+        <ReactThemeToggleButton isDark onChange={() => {}} invertedIconLogic />
+      );
+
+      expect(screen.getByRole("checkbox")).not.toBeChecked();
     });
   });
 });

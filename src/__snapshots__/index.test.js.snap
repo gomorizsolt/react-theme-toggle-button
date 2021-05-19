@@ -7,6 +7,7 @@ exports[`ReactThemeToggleButton renders correctly 1`] = `
   title="Activate light mode"
 >
   <input
+    checked={true}
     onChange={[Function]}
     type="checkbox"
   />
